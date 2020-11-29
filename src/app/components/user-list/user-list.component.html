@@ -1,0 +1,4 @@
+<p>List of users:</p>
+<ul>
+    <li *ngFor="let user of userService.getUsers() | async">{{ user.name }}</li>
+</ul>
