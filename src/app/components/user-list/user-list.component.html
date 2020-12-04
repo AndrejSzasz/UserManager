@@ -1,4 +1,15 @@
 <p>List of users:</p>
-<ul>
-    <li *ngFor="let user of userService.getUsers() | async">{{ user.name }}</li>
-</ul>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th colspan="2">Actions</th>
+    </tr>
+    <tr *ngFor="let user of userService.getUsers() | async">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td><del>Edit</del></td>
+        <td><del>Delete</del></td>
+    </tr>
+    <tr><td colspan="4"><del>Add User</del></td></tr>
+</table>
